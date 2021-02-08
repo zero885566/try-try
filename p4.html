@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #00255C;
+      position: relative;
+    }
+
+    button {
+      position: absolute;
+      width: 300px;
+      height: 80px;
+      background-color: #d82c57;
+      border: unset;
+      border-radius: 15px;
+      box-shadow: none;
+      color: #ffffff;
+      font-size: 45px;
+      font-weight: bold;
+      margin: 2%;
+      right: 0;
+      bottom: 0;
+    }
+
+    .box {
+      width: 65vw;
+      height: 75vh;
+      display: flex;
+      /* flex-direction: column; */
+      background: url(/img/bac.png) no-repeat center/100%;
+      justify-content: center;
+      align-items:end;
+    }
+
+    .text {
+      color: #3d3d3d;
+      font-size: 30px;
+      font-weight: bolder;
+      margin: 8%;
+      border: outset 4px #ffffff;
+      border-radius: 10px;
+      padding: 1%;
+    }
+
+    img {
+      width: 45%;
+      border-radius: 8px;
+      margin-top: 2%;
+    }
+    h3{
+      font-size: 45px;
+      color: #ffffff;
+    }
+  </style>
+  <div class="box">
+   
+    <div class="text">
+      <h3 id="constellation">
+      </h3>
+      <span>的你，搭配上</span>
+      <h3 id="shose"></h3>
+      <span>是最好適合的選擇，祝你有美好的一天 !!</span>
+    </div>
+     <img src="" alt="">
+  </div>
+  <button onclick="location.href='/p1.html'">BACK</button>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <script>
+
+    $('#constellation').text(localStorage.getItem('star'))
+    // let src = localStorage.getItem('src')
+    $('#shose').text(localStorage.getItem('shose'))
+
+    $('img').attr("src", localStorage.getItem('src'))
+
+    $('button').click(function () {
+      localStorage.removeItem("shose")
+      localStorage.removeItem("src")
+    }
+    )
+  </script>
+
+
+</body>
+
+</html>

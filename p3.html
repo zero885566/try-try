@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #00255C;
+    }
+
+    button {
+      width: 400px;
+      height: 80px;
+      background-color: #DB4D70;
+      border: unset;
+      border-radius: 15px;
+      box-shadow: none;
+      color: #ffffff;
+      font-size: 45px;
+      font-weight: bold;
+      margin: 2%;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: bolder;
+      color: #ffffff;
+    }
+
+    .chose {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 7%;
+    }
+  </style>
+  <style>
+    .card {
+      position: relative;
+      transform-style: preserve-3d;
+      float: left;
+      margin: 0 20px 20px;
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+      background-color: unset;
+      margin: 0 2% 0 2%;
+      /* transition: 1s; */
+    }
+
+    .card.active {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+
+    .img {
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: .5s;
+    }
+
+    .box-shadow {
+      width: 120%;
+      box-shadow: 0px 0px 11px 4px #FFFFFF;
+      -webkit-box-shadow: 0px 0px 11px 4px #FFFFFF;
+      -moz-box-shadow: 0px 0px 11px 4px #FFFFFF;
+      -o-box-shadow: 0px 0px 11px 4px #FFFFFF;
+    }
+
+    .front {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+
+    .transition {
+      transition: all .5s;
+      -webkit-transition: all .5s;
+    }
+
+    .box:hover {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+
+    .none {
+      opacity: 0;
+    }
+  </style>
+  <h1 class="animate__animated">按照心情 選一個吧!</h1>
+  <div class="chose">
+    <div class="card transition">
+      <div class="card_wrap" >
+        <img class="back img" data-val="a1" src="img/資產 6.svg">
+        <img class="front img" src="img/IMG_0830.JPG" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap" >
+        <img class="back img" data-val="a2" src="img/red.svg">
+        <img class="front img" src="img/IMG_0830.JPG" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap">
+        <img class="back img"  data-val="a3" src="img/green.svg">
+        <img class="front img" src="img/IMG_0830.JPG" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap" >
+        <img class="back img" data-val="a4" src="img/yellow.svg">
+        <img class="front img" src="img/IMG_0830.JPG" alt="">
+      </div>
+    </div>
+    <div class="card transition">
+      <div class="card_wrap" >
+        <img class="back img" data-val="a5" src="img/white.svg">
+        <img class="front img" src="img/IMG_0830.JPG" alt="">
+      </div>
+    </div>
+  </div>
+  
+  <button class="animate__animated" onclick="location.href='/p4.html'">Go & Get</button>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+
+    const martix = {
+      a1: {
+        vaule: "Converse",
+        src:"/img/Converse.jpg"
+      },
+      a2: {
+        vaule: "Air Jordan I",
+        src:"/img/Jordan.jpg"
+
+      },
+      a3: {
+        vaule: "Stan Smith",
+        src:"/img/Smith.jpg"
+      },
+      a4: {
+        vaule: "Air Max 97",
+        src:"/img/Max.jpg"
+      },
+      a5: {
+        vaule: "Air Force I",
+        src:"/img/Force.jpg"
+      }
+
+    }
+  </script>
+
+  <script>
+
+    $('.card').click(function () {
+      $(".img").toggleClass("box-shadow");
+      $(this).siblings().toggleClass('none');
+      $(this).find(".back").toggleClass('get')
+    })
+
+    $('button').hover(function () {
+      $(this).toggleClass("animate__jello")
+    })
+    $('button').click(function () {
+      let val = $(".card_wrap .get").attr("data-val")
+      console.log(val)
+      console.log(martix[val].vaule)
+      localStorage.setItem("shose",martix[val].vaule)
+      localStorage.setItem("src",martix[val].src)
+
+    })
+    $("h1").hover(function () {
+      $(this).toggleClass("animate__shakeY")
+    })
+             
+
+  </script>
+  <script>
+    let cardOpened = 0;
+    $(".card").click(function () {
+      $(this).toggleClass("active")
+      cardOpened = $(".card.active").length;
+      console.log(cardOpened)
+    })
+  </script>
+
+
+
+</body>
+
+</html>
